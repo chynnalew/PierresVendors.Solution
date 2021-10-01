@@ -31,8 +31,12 @@ namespace PierresVendors.Controllers
     [HttpGet("/vendor/{Id}")]
     public ActionResult Show(int Id)
     {
-      Vendor selectedVendor = Vendor.FindVendor(Id);
-      return View(selectedVendor);
+      Dictionary<string, object> model = new Dictionary<string, object>();
+      Vendor findVendor= Vendor.FindVendor(Id);
+      List<Order> vendorOrders = findVendor.Orders;
+      model.Add("vendor", findVendor);
+      model.Add("order", vendorOrders);
+      return View(model);
     }
   }
 }
