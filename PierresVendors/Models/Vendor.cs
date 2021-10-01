@@ -41,5 +41,11 @@ namespace PierresVendors.Models
     {
       return _instance.Find(vendor => vendor.Id ==ID);
     }
+
+    public static void DeleteVendor(int ID)
+    {
+      Vendor vendorToRemove = Vendor.FindVendor(ID);
+      _instance.Remove(vendorToRemove);
+    }
   }
 }

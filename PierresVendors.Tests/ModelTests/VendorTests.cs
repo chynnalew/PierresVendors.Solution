@@ -90,7 +90,7 @@ namespace PierresVendors.Tests
       CollectionAssert.AreEqual(testList, resultList);
     }
     [TestMethod]
-    public void Find_SearchForVendorById_Vendor()
+    public void FindVendor_SearchForVendorById_Vendor()
     {      
       string name = "Vendor";
       string description = "Description";
@@ -100,6 +100,21 @@ namespace PierresVendors.Tests
       Vendor newVendor2 = new Vendor(name2, description2);
       Vendor result = Vendor.FindVendor(1);
       Assert.AreEqual(newVendor2, result);
+    }
+    [TestMethod]
+    public void DeleteVendor_DeleteASingleVendor_List()
+    {      
+      string name = "Vendor";
+      string description = "Description";
+      Vendor newVendor = new Vendor(name, description);
+      string name2 = "Vendor2";
+      string description2 = "Description2";
+      Vendor newVendor2 = new Vendor(name2, description2);
+      List<Vendor> testList = Vendor.GetList();
+      List<Vendor> list2 = new List<Vendor>{};
+      list2.Add(newVendor2);
+      Vendor.DeleteVendor(0);
+      CollectionAssert.AreEqual(testList, list2);
     }
   }
 }
