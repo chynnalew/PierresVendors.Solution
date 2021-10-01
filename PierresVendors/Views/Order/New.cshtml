@@ -10,16 +10,16 @@
   <form action="/vendor/@Model.Id/order" method="post">
     <input id="vendorId" name="vendorId" type="hidden" value="@Model.Id">
     <label for="orderTitle">Order Title: </label>
-    <input id="orderTitle" name="orderTitle" type="text">
+    <input id="orderTitle" name="orderTitle" type="text" required>
     <br>
     <label for="orderDescription">Order Description: </label>
-    <input id="orderDescription" name="orderDescription" type="text">
+    <input id="orderDescription" name="orderDescription" type="text" required>
     <br>
     <label for="orderPrice">Order Total: $ </label>
-    <input id="orderPrice" name="orderPrice" type="int">
+    <input id="orderPrice" name="orderPrice" type="int" required>
     <br>
     <label for="orderDate">Order Date:</label>
-    <input id="orderDate" name="orderDate" type="date">
+    <input id="orderDate" name="orderDate" type="date" required>
     <br>
     <button type="submit" class="btn btn-outline-success">Add Order</button>
   </form>

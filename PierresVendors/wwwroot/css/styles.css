@@ -1,5 +1,5 @@
-/* font-family: 'Montserrat', sans-serif;
-font-family: 'Mr Dafoe', cursive; */
+/* font-family: 'Oleo Script', cursive;
+font-family: 'Oswald', sans-serif; */
 html, body { 
   height: 100%; 
   display: flex;
@@ -10,7 +10,8 @@ body {
   background-color: rgba(247, 238, 231, 0.712);
   background-blend-mode:soft-light;
   background-image: url(../img/background.jpeg);
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Oswald', sans-serif;
+  font-weight: bolder;
 }
 .header {
   padding: 20px;
@@ -21,7 +22,8 @@ body {
   border-bottom: 5px rgba(19, 134, 19, 0.473) solid;
 }
 .header h1{
-  font-family: 'Mr Dafoe', cursive;
+  color: rgb(68, 50, 26);
+  font-family: 'Oleo Script', cursive;
   font-size: 80px;
 }
 .shaded {
@@ -33,6 +35,10 @@ body {
   background-image: linear-gradient( rgba(240, 226, 226, 0.137) 10%, rgba(238, 218, 174, 0.719));
   padding: 25px;
   text-align: left;
+}
+.brown {
+  color: rgb(68, 50, 26);
+
 }
 .shaded h1, .shaded h2, .shaded h3 {
   text-shadow: 5px 5px 40px rgba(253, 253, 253, 0.993);
@@ -62,4 +68,11 @@ a {
 a:active {
   color: rgb(54, 35, 10);
   font-size: x-large;
+}
+a:focus {
+  color: rgb(12, 114, 12);
+  font-size: x-large;
+}
+.center {
+  text-align: center;
 }

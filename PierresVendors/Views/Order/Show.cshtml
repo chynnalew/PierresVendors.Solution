@@ -6,10 +6,10 @@
 <div class="header">
   <h1>Order Details</h1>
 </div>
-<div class="Shaded">
+<div class="shaded">
   <h2>@Model["order"].Title</h2>
-  <p>Due Date: @Model["order"].Date</p>
-  <p>Price: @Model["order"].Price</p>
+  <p class="brown">Due Date: @Model["order"].Date</p>
+  <p class="brown">Price: $@Model["order"].Price</p>
   <h3>Description: @Model["order"].Description</h3>
 
   <a href='/vendor/@Model["vendor"].Id' class="btn btn-outline-success">Return to this vendor</a>
