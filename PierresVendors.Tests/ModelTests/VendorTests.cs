@@ -89,5 +89,17 @@ namespace PierresVendors.Tests
       List<Vendor> testList = Vendor.GetList();
       CollectionAssert.AreEqual(testList, resultList);
     }
+    [TestMethod]
+    public void Find_SearchForVendorById_Vendor()
+    {      
+      string name = "Vendor";
+      string description = "Description";
+      Vendor newVendor = new Vendor(name, description);
+      string name2 = "Vendor2";
+      string description2 = "Description2";
+      Vendor newVendor2 = new Vendor(name2, description2);
+      Vendor result = Vendor.FindVendor(1);
+      Assert.AreEqual(newVendor2, result);
+    }
   }
 }
