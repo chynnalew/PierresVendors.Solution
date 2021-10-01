@@ -132,5 +132,20 @@ namespace PierresVendors.Tests
       List<Order> testList = Order.GetList();
       Assert.AreEqual(Order.FindOrder(0), testList[0]);
     }
+    [TestMethod]
+    public void DeleteOrder_DeleteASingleOrder_List()
+    {      
+      string title = "title";
+      string description = "description";
+      int price = 10;
+      string date = "date";
+      Order newOrder = new Order(title, description, price, date);
+      Order newOrder2 = new Order(title, description, price, date);
+      List<Order> testList = Order.GetList();
+      List<Order> list2 = new List<Order>{};
+      list2.Add(newOrder2);
+      Order.DeleteOrder(0);
+      CollectionAssert.AreEqual(testList, list2);
+    }
   }
 }
