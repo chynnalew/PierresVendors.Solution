@@ -1,6 +1,6 @@
-# Name of Project
+# Pierre's Vendors
 
-#### short description of the app
+#### an application that allows a baker to keep track of the vendors they supply to and their orders
 
 #### Created By: Chynna Lew
 
@@ -14,7 +14,15 @@
 
 ## Description
 
-Detailed description
+This application allows the user to create and store new vendor objects to keep track of the vendors that order from them. They are also able to create and store new orders within the vendors.
+This application was created for Epicodus to demonstrate an understanding of using ASP.NET Core MVC to build web applications in C#. 
+
+* Project objectives:
+  - Use Vendor and Order classes
+  - Use two or more controllers
+  - Thorough unit testing on models
+  - GET and POST requests/responses are used properly
+  - MVC routes follow RESTful conventions
 
 ## Setup and Usage Instructions
 
@@ -27,7 +35,7 @@ Detailed description
 
 * Clone [this](github.com/chynnalew/PierresVendors.Solution) repository, or download and open the Zip on your local machine
 * Open the PierresVendors.Solution folder in your preferred text editor
-* Restore and build the project:
+* Restore, build, and run the project:
   - Navigate to the PierresVendors.Solutions/PierresVendors folder in the command line or terminal 
     -- Run the command "$ dotnet restore" to restore the project dependencies
     -- Run the command "$ dotnet build" to build and compile the project
