@@ -8,12 +8,15 @@ namespace PierresVendors.Models
     public string Name {get; set;}
     public string Description {get; set;}
     public List<Order> Orders {get; set;}
+    public int Id {get;}
+    private static int _instanceNumber = 0;
 
     public Vendor (string name, string description)
     {
       Name = name;
       Description = description;
       Orders = new List<Order> {};
+      Id = _instanceNumber ++;
     }
 
     public void AddOrder(Order order)

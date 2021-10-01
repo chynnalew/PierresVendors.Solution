@@ -48,5 +48,24 @@ namespace PierresVendors.Tests
       List<Order> result = newVendor.Orders;
       CollectionAssert.AreEqual(newList, result);
     }
+    [TestMethod]
+    public void VendorConstructor_ConstructorAssignsUniqueId_Int()
+    {      
+      string name = "Vendor";
+      string description = "Description";
+      Vendor newVendor = new Vendor(name, description);
+      Assert.AreEqual(4, newVendor.Id);
+    }
+    [TestMethod]
+    public void VendorConstructor_ConstructorAssignsUniqueIds_Int()
+    {      
+      string name = "Vendor";
+      string description = "Description";
+      Vendor newVendor = new Vendor(name, description);
+      string name2 = "Vendor2";
+      string description2 = "Description2";
+      Vendor newVendor2 = new Vendor(name2, description2);
+      Assert.AreEqual(6, newVendor2.Id);
+    }
   }
 }
