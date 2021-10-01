@@ -4,13 +4,13 @@ using PierresVendors.Models;
 namespace PierresVendors.Tests
 {
   [TestClass]
-  public class ItemTests
+  public class VendorTests
   {
-    [TestMethod]
-    public void NameOfMethod_DescribeBehavior_ExpectedResult()
-    {
+    // [TestMethod]
+    // public void NameOfMethod_DescribeBehavior_ExpectedResult()
+    // {
 
-    }
+    // }
 
   }
 }
