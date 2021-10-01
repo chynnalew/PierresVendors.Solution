@@ -121,5 +121,16 @@ namespace PierresVendors.Tests
       Order newOrder2 = new Order(title2, description2, price2, date2);
       Assert.AreEqual(1, newOrder2.Id);
     }
+    [TestMethod]
+    public void FindOrder_FindsOrderById_Order()
+    {      
+      string title = "title";
+      string description = "description";
+      int price = 10;
+      string date = "date";
+      Order newOrder = new Order(title, description, price, date);
+      List<Order> testList = Order.GetList();
+      Assert.AreEqual(Order.FindOrder(0), testList[0]);
+    }
   }
 }
