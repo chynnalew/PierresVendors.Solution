@@ -7,17 +7,18 @@
 <div class="container">
   <h1>@Model["vendor"].Name</h1>
   <h3>@Model["vendor"].Description</h3>
+  <p>Order Log:</p>
   @if (@Model["vendor"].Orders.Count == 0)
   {
     <h3>This vendor hasn't ordered yet</h3>
   }
   <ul>
-  @foreach (Order order in @Model["order"])
+  @foreach (Order order in @Model["orders"])
   {
-    <li><a href='/vendor/@Model["vendor"].Id/order/order.Id'>@order.Title</a></li>
+    <li><a href='/vendor/@Model["vendor"].Id/order/@order.Id'>@order.Title</a></li>
   }
   </ul>
-  <p><a href='/vendor/@Model["vendor"].Id/order/new'>Add a new item</a></p>
+  <p><a href='/vendor/@Model["vendor"].Id/order/new'>Add a new Order</a></p>
   <p><a href='/vendor'>Return to Vendor List</a></p>
   <p><a href='/'>Return to Main Page</a></p>
   <form action='/vendor/@Model["vendor"].Id' method="post">
