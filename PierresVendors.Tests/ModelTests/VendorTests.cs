@@ -9,20 +9,26 @@ namespace PierresVendors.Tests
     [TestMethod]
     public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
     {
-      Vendor newVendor = new Vendor("Vendor", "Description");
+      string name = "Vendor";
+      string description = "Description";
+      Vendor newVendor = new Vendor(name, description);
       Assert.AreEqual(typeof(Vendor), newVendor.GetType());
     }
     [TestMethod]
     public void VendorConstructor_ReadsVendorName_String()
     {
-      Vendor newVendor = new Vendor("Vendor", "Description");
-      Assert.AreEqual("Vendor", newVendor.Name);
+      string name = "Vendor";
+      string description = "Description";
+      Vendor newVendor = new Vendor(name, description);
+      Assert.AreEqual(name, newVendor.Name);
     }
     [TestMethod]
     public void VendorConstructor_ReadsVendorDescription_String()
     {
-      Vendor newVendor = new Vendor("Vendor", "Description");
-      Assert.AreEqual("Description", newVendor.Description);
+      string name = "Vendor";
+      string description = "Description";
+      Vendor newVendor = new Vendor(name, description);
+      Assert.AreEqual(description, newVendor.Description);
     }
   }
 }

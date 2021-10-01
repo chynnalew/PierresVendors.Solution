@@ -11,32 +11,52 @@ namespace PierresVendors.Tests
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
-      Order newOrder = new Order("test", "test", 0, "date");
+      string title = "test";
+      string description = "test";
+      int price = 0;
+      string date = "date";
+      Order newOrder = new Order(title, description, price, date);
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
     [TestMethod]
     public void OrderConstructor_ReadsOrderTitle_String()
     {
-      Order newOrder = new Order("title", "description", 0, "date");
-      Assert.AreEqual("title", newOrder.Title);
+      string title = "title";
+      string description = "description";
+      int price = 10;
+      string date = "date";
+      Order newOrder = new Order(title, description, price, date);
+      Assert.AreEqual(title, newOrder.Title);
     }
     [TestMethod]
     public void OrderConstructor_ReadsOrderDescription_String()
     {
-      Order newOrder = new Order("title", "description", 0, "date");
-      Assert.AreEqual("description", newOrder.Description);
+      string title = "title";
+      string description = "description";
+      int price = 10;
+      string date = "date";
+      Order newOrder = new Order(title, description, price, date);
+      Assert.AreEqual(description, newOrder.Description);
     }
     [TestMethod]
     public void OrderConstructor_ReadsOrderPrice_Int()
     {
-      Order newOrder = new Order("title", "description", 10, "date");
-      Assert.AreEqual(10, newOrder.Price);
+      string title = "title";
+      string description = "description";
+      int price = 10;
+      string date = "date";
+      Order newOrder = new Order(title, description, price, date);
+      Assert.AreEqual(price, newOrder.Price);
     }
     [TestMethod]
     public void OrderConstructor_ReadsOrderDate_String()
     {
-      Order newOrder = new Order("title", "description", 10, "10-25-2021");
-      Assert.AreEqual("10-25-2021", newOrder.Date);
+      string title = "title";
+      string description = "description";
+      int price = 10;
+      string date = "date";
+      Order newOrder = new Order(title, description, price, date);
+      Assert.AreEqual(date, newOrder.Date);
     }
     // [TestMethod]
     // public void GetList_ReadsEmptyList_List()
