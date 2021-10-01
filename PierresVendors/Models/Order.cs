@@ -20,6 +20,7 @@ namespace PierresVendors.Models
       Price = price;
       Date = date;
       Id = _instanceNumber ++;
+      _instances.Add(this);
     }
 
      public static List<Order> GetList()

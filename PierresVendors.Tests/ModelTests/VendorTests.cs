@@ -6,11 +6,11 @@ namespace PierresVendors.Tests
   [TestClass]
   public class VendorTests
   {
-    // [TestMethod]
-    // public void NameOfMethod_DescribeBehavior_ExpectedResult()
-    // {
-
-    // }
-
+    [TestMethod]
+    public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
+    {
+      Vendor newVendor = new Vendor();
+      Assert.AreEqual(typeof(Vendor), newVendor.GetType());
+    }
   }
 }
