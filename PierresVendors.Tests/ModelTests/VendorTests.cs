@@ -6,8 +6,13 @@ using System.Collections.Generic;
 namespace PierresVendors.Tests
 {
   [TestClass]
-  public class VendorTests
+  public class VendorTests :IDisposable
   {
+    public void Dispose()
+    {
+      Vendor.ClearAll();
+    }
+
     [TestMethod]
     public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
     {
@@ -54,7 +59,7 @@ namespace PierresVendors.Tests
       string name = "Vendor";
       string description = "Description";
       Vendor newVendor = new Vendor(name, description);
-      Assert.AreEqual(4, newVendor.Id);
+      Assert.AreEqual(0, newVendor.Id);
     }
     [TestMethod]
     public void VendorConstructor_ConstructorAssignsUniqueIds_Int()
@@ -65,7 +70,24 @@ namespace PierresVendors.Tests
       string name2 = "Vendor2";
       string description2 = "Description2";
       Vendor newVendor2 = new Vendor(name2, description2);
-      Assert.AreEqual(6, newVendor2.Id);
+      Assert.AreEqual(1, newVendor2.Id);
+    }
+    [TestMethod]
+    public void List_ReadsEmptyList_True()
+    {
+      List<Vendor> emptyList = new List<Vendor>{};
+      List<Vendor> testList = Vendor.GetList();
+      CollectionAssert.AreEqual(emptyList,testList);
+    }
+    [TestMethod]
+    public void GetList_StoresVendors_VendorList()
+    {
+      string name = "Vendor";
+      string description = "Description";
+      Vendor newVendor = new Vendor(name, description);
+      List<Vendor> resultList = new List<Vendor> {newVendor};
+      List<Vendor> testList = Vendor.GetList();
+      CollectionAssert.AreEqual(testList, resultList);
     }
   }
 }
