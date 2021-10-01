@@ -7,11 +7,11 @@
   <h1>Order Details: </h1>
 
   <h2>@Model["order"].Title</h2>
-  <h2>@Model["order"].Date</h2>
-  <h2>@Model["order"].Price</h2>
-  <h2>@Model["order"].Description</h2>
+  <p>Due Date: @Model["order"].Date</p>
+  <p>Price: @Model["order"].Price</p>
+  <h3>Description: @Model["order"].Description</h3>
 
-  <a href='/vendor/@Model["vendor"].Id/order/new'>Add a new</a>
-  <a href='/vendor/@Model["vendor"].Id'>Return to this vendor</a>
-  <a href='/vendor'>Return to vendor list</a>
+  <a href='/vendor/@Model["vendor"].Id' class="btn btn-dark">Return to this vendor</a>
+  <br>
+  <a href='/vendor' class="btn btn-dark">Return to the vendor list</a>
 </div>
