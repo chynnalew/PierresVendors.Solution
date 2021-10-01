@@ -1,8 +1,10 @@
 @{
   Layout = "_Layout";
 }
-
-<div class="container">
+<div class="header">
+  <h1>Add Order</h1>
+</div>
+<div class="shaded">
   <h1>Add a new Order For @Model.Name</h1>
 
   <form action="/vendor/@Model.Id/order" method="post">
@@ -19,6 +21,6 @@
     <label for="orderDate">Order Date:</label>
     <input id="orderDate" name="orderDate" type="date">
     <br>
-    <button type="submit" class="btn btn-dark">Add Order</button>
+    <button type="submit" class="btn btn-outline-success">Add Order</button>
   </form>
 </div>

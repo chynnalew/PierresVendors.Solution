@@ -1,0 +1,65 @@
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Mr Dafoe', cursive; */
+html, body { 
+  height: 100%; 
+  display: flex;
+  flex-direction: column;
+}
+body {
+  background-size: cover;
+  background-color: rgba(247, 238, 231, 0.712);
+  background-blend-mode:soft-light;
+  background-image: url(../img/background.jpeg);
+  font-family: 'Montserrat', sans-serif;
+}
+.header {
+  padding: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  background-image: linear-gradient( 135deg, rgba(240, 226, 226, 0.637) 10%, rgba(221, 188, 117, 0.548) 100%);
+  border-radius: 0 0 85% 85% / 30%;
+  border-bottom: 5px rgba(19, 134, 19, 0.473) solid;
+}
+.header h1{
+  font-family: 'Mr Dafoe', cursive;
+  font-size: 80px;
+}
+.shaded {
+  color: green;
+  box-sizing: border-box;
+  flex-grow: 1;
+  height: 100%;
+  text-align: center;
+  background-image: linear-gradient( rgba(240, 226, 226, 0.137) 10%, rgba(238, 218, 174, 0.719));
+  padding: 25px;
+  text-align: left;
+}
+.shaded h1, .shaded h2, .shaded h3 {
+  text-shadow: 5px 5px 40px rgba(253, 253, 253, 0.993);
+}
+.btn-outline-success {
+  background-color: rgb(236, 233, 213);
+  font-weight: bolder;
+  font-size: 20px;
+  width: 100%;
+  text-align: center;
+  margin-top:10px;
+}
+label {
+  display: block;
+  font-size: 25px;
+  font-weight:bolder;
+  text-align: left;
+}
+input {
+  display: block;
+  text-align: left;
+}
+a {
+  color: rgb(54, 35, 10);
+  font-size: x-large;
+}
+a:active {
+  color: rgb(54, 35, 10);
+  font-size: x-large;
+}

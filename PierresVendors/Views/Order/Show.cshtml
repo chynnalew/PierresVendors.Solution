@@ -3,15 +3,16 @@
 }
 @using PierresVendors.Models;
 
-<div class="container">
-  <h1>Order Details: </h1>
-
+<div class="header">
+  <h1>Order Details</h1>
+</div>
+<div class="Shaded">
   <h2>@Model["order"].Title</h2>
   <p>Due Date: @Model["order"].Date</p>
   <p>Price: @Model["order"].Price</p>
   <h3>Description: @Model["order"].Description</h3>
 
-  <a href='/vendor/@Model["vendor"].Id' class="btn btn-dark">Return to this vendor</a>
+  <a href='/vendor/@Model["vendor"].Id' class="btn btn-outline-success">Return to this vendor</a>
   <br>
-  <a href='/vendor' class="btn btn-dark">Return to the vendor list</a>
+  <a href='/vendor' class="btn btn-outline-success">Return to the vendor list</a>
 </div>
