@@ -1,5 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PierresVendors.Models;
+using System;
+using System.Collections.Generic;
 
 namespace PierresVendors.Tests
 {
@@ -35,6 +37,13 @@ namespace PierresVendors.Tests
     {
       Order newOrder = new Order("title", "description", 10, "10-25-2021");
       Assert.AreEqual("10-25-2021", newOrder.Date);
+    }
+    [TestMethod]
+    public void GetList_ReadsEmptyList_List()
+    {
+      List<Order> emptyList = new List<Order>{};
+      List<Order> testList = Order.GetList();
+      CollectionAssert.AreEqual(emptyList,testList);
     }
   }
 }
