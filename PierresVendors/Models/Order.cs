@@ -10,10 +10,11 @@ namespace PierresVendors.Models
     public int Price {get; set;}
     public string Date {get; set;}
 
-    public Order(string title, string description)
+    public Order(string title, string description, int price)
     {
       Title = title;
       Description = description;
+      Price = price;
     }
   }
 }
