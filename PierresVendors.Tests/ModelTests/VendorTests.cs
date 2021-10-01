@@ -1,5 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PierresVendors.Models;
+using System;
+using System.Collections.Generic;
 
 namespace PierresVendors.Tests
 {
@@ -29,6 +31,22 @@ namespace PierresVendors.Tests
       string description = "Description";
       Vendor newVendor = new Vendor(name, description);
       Assert.AreEqual(description, newVendor.Description);
+    }
+    [TestMethod]
+    public void AddOrder_AddsOrderToVendorList_List()
+    {
+      string title = "title";
+      string description = "description";
+      int price = 10;
+      string date = "date";
+      Order newOrder = new Order(title, description, price, date);
+      List<Order> newList = new List<Order> { newOrder };
+      string name = "name";
+      string description2 = "test";
+      Vendor newVendor = new Vendor(name, description2);
+      newVendor.AddOrder(newOrder);
+      List<Order> result = newVendor.Orders;
+      CollectionAssert.AreEqual(newList, result);
     }
   }
 }
