@@ -1,0 +1,22 @@
+@using PierresVendors.Models;
+
+<div class="container">
+  <h1>@Model.Name</h1>
+  <h3>@Model.Description</h3>
+  @if (@Model.Orders.Count == 0)
+  {
+    <h3>This vendor hasn't ordered yet</h3>
+  }
+  <ul>
+  @foreach (Order order in @Model["orders"])
+  {
+    <li><a href='/vendor/@Model["vendor"].Id/order/order.Id'>@order.Title</a></li>
+  }
+  </ul>
+  <p><a href='/vendor/@Model["vendor"].Id/order/new'>Add a new item</a></p>
+  <p><a href='/vendor'>Return to Vendor List</a></p>
+  <p><a href='/'>Return to Main Page</a></p>
+  <form action="/vendor/@Model.Id" method="post">
+    <button type="submit" class="btn btn-dark">Delete this Vendor</button>
+  </form>
+</div>

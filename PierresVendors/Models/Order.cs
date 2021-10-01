@@ -27,5 +27,11 @@ namespace PierresVendors.Models
     {
       return _instances;
     }
+
+    public static void ClearAll()
+    {
+      _instances.Clear();
+      _instanceNumber = 0;
+    }
   }
 }
